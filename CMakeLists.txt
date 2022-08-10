@@ -1,27 +1,33 @@
-cmake_minimum_required(VERSION 3.23)
-project(simple_shell C)
+cmake_minimum_required(VERSION 3.0.0)
+project(simple-shell VERSION 0.1.0)
 
-set(CMAKE_C_STANDARD 11)
+include(CTest)
+enable_testing()
 
-include_directories(.)
+include_directories(lib/)
 
-add_executable(simple_shell
-        prompt.c
-        shell.c
-        parse_string.c
-        _realloc.c
-        execute_command.c
-        execute_decision.c
-        free_double_pointer.c
-        shell.h
-        get_env_variable.c
-        complete_path.c
-        get_builtin_function.c
-        change_directory.c
-        set_env_variable.c
-        exit_command.c
-        echo.c
-        print_working_directory.c
-        help.c
-        print_double_pointer.c
-        _pow_recursion.c copy_double_pointer.c print_env.c add_node_list.c free_list.c)
+add_executable(simple-shell shell.c
+  lib/_pow_recursion.c
+  lib/_realloc.c
+  lib/add_node_list.c
+  lib/change_directory.c
+  lib/complete_path.c
+  lib/copy_double_pointer.c
+  lib/echo.c
+  lib/help.c
+  lib/env_variables.c
+  lib/execute_command.c
+  lib/execute_decision.c
+  lib/exit_command.c
+  lib/free_list.c
+  lib/free_double_pointer.c
+  lib/get_builtin_function.c
+  lib/parse_string.c
+  lib/print_double_pointer.c
+  lib/print_working_directory.c
+  lib/prompt.c
+)
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
