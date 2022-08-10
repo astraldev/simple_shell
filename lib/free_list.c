@@ -20,3 +20,16 @@ void free_list(list_t *head, char **env)
 		head = buffer;
 	}
 }
+
+void free_user_input_type(user_input_type *head)
+{
+	user_input_type *buffer;
+
+	while (head)
+	{
+		buffer = head->next;
+		free(head->string);
+		free(head);
+		head = buffer;
+	}
+}

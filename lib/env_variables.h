@@ -1,7 +1,7 @@
 
 #include "types.h"
 #include "add_node_list.h"
-#include "print_double_pointer.h"
+#include "double_pointer.h"
 
 char *get_env_variable(char **, char *);
 int set_env_variable(char **, char *, char *, list_t **);

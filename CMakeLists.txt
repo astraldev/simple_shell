@@ -12,7 +12,7 @@ add_executable(simple-shell shell.c
   lib/add_node_list.c
   lib/change_directory.c
   lib/complete_path.c
-  lib/copy_double_pointer.c
+  lib/double_pointer.c
   lib/echo.c
   lib/help.c
   lib/env_variables.c
@@ -20,10 +20,8 @@ add_executable(simple-shell shell.c
   lib/execute_decision.c
   lib/exit_command.c
   lib/free_list.c
-  lib/free_double_pointer.c
   lib/get_builtin_function.c
   lib/parse_string.c
-  lib/print_double_pointer.c
   lib/print_working_directory.c
   lib/prompt.c
 )

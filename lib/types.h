@@ -25,4 +25,11 @@ typedef struct
 	int (*op)(char **, char *, list_t **);
 } execute_functions;
 
+typedef struct list
+{
+	char *string;
+	int add_or;
+	struct list *next;
+} user_input_type;
+
 #endif

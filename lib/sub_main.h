@@ -1,0 +1,21 @@
+
+#include "types.h"
+#include "_pow_recursion.h"
+#include "_realloc.h"
+#include "prompt.h"
+#include "execute_command.h"
+#include "execute_decision.h"
+#include "parse_string.h"
+#include "double_pointer.h"
+#include "env_variables.h"
+#include "complete_path.h"
+#include "get_builtin_function.h"
+#include "change_directory.h"
+#include "print_working_directory.h"
+#include "exit_command.h"
+#include "free_list.h"
+#include "echo.h"
+#include "help.h"
+#include "add_node_list.h"
+
+int sub_main(char **, int *, char ***, list_t **);
