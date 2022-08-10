@@ -1,7 +1,7 @@
-//
-// Created by ifiokekott on 8/6/22.
-//
-#include "shell.h"
+/*
+* Created by ifiokekott on 8/6/22.
+*/
+#include "print_double_pointer.h"
 
 int print_double_pointer(char **double_ptr)
 {

@@ -1,11 +1,11 @@
 /*
  * Created by ifiokekott on 8/5/22.
  */
-#include "shell.h"
+#include "change_directory.h"
 
 int change_directory(char **env, char *string, list_t **head)
 {
-	char *buffer, *path = NULL, *new_path, *old_path, *delimiter = " ";
+	char *buffer, *path = NULL, *old_path, *delimiter = " ";
 	int flag_path = 0;
 	/*
 	 * removes the cd from the string

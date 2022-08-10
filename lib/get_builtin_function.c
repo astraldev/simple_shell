@@ -1,8 +1,8 @@
-//
-// Created by ifiokekott on 8/5/22.
-//
+/*
+* Created by ifiokekott on 8/5/22.
+*/
 
-#include "shell.h"
+#include "get_builtin_function.h"
 
 int (*get_builtin_function(char *string))(char **, char *, list_t **)
 {
@@ -15,7 +15,8 @@ int (*get_builtin_function(char *string))(char **, char *, list_t **)
 			{"env", print_env},
 			{NULL, NULL},
 	};
-	int (*builtin_commands)(char **, char *, list_t **) = NULL, iteration;
+
+	int iteration;
 
 	buffer = strdup(string);
 	first_word = strtok(buffer, delimiter);

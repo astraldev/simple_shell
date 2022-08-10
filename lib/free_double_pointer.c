@@ -1,8 +1,8 @@
-//
-// Created by ifiokekott on 8/5/22.
-//
+/*
+* Created by ifiokekott on 8/5/22.
+*/
 
-#include "shell.h"
+#include "free_double_pointer.h"
 
 int free_double_pointer(char **db_ptr)
 {

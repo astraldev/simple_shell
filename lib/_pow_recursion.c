@@ -1,7 +1,7 @@
-//
-// Created by ifiokekott on 8/6/22.
-//
-#include "shell.h"
+/*
+* Created by ifiokekott on 8/6/22.
+*/
+#include "_pow_recursion.h"
 
 int _pow_recursion(int x, int y)
 {

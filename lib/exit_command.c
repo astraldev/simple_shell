@@ -1,8 +1,8 @@
-//
-// Created by ifiokekott on 8/5/22.
-//
+/*
+* Created by ifiokekott on 8/5/22.
+*/
 
-#include "shell.h"
+#include "exit_command.h"
 
 int exit_command(char *string)
 {

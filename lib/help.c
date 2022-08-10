@@ -1,7 +1,7 @@
-//
-// Created by ifiokekott on 8/6/22.
-//
-#include "shell.h"
+/*
+* Created by ifiokekott on 8/6/22.
+*/
+#include "help.h"
 
 int help(char **env __attribute__((unused)), char *string __attribute__((unused)), list_t **head __attribute__((unused)))
 {

@@ -1,21 +1,20 @@
-//
-// Created by ifiokekott on 8/5/22.
-//
+/*
+* Created by ifiokekott on 8/5/22.
+*/
 
-#include "shell.h"
+#include "complete_path.h"
 
 char *complete_path(char *string, char **environment)
 {
-	char *path, *path_token, *buffer, *buffer2, *buffer3, *buffer4, *complete_string, *incomplete_path, *delimiter = " ", *path_delimiter = ":";
+	char *path, *path_token, *buffer, *buffer2, *buffer3, *complete_string, *incomplete_path, *delimiter = " ", *path_delimiter = ":";
 	struct stat st;
 
 	buffer2 = strdup(string);
 	incomplete_path = strtok(buffer2, delimiter);
-	//    gets the environment variable for PATH
 	path = get_env_variable(environment, "PATH");
 	buffer3 = strdup(path);
-	path_token = strtok(buffer3, path_delimiter);
-	// // Keep printing tokens while one of the delimiters present in path[].
+	path_token = strtok(buffer3, path_delimiter); 
+	/* Keep printing tokens while one of the delimiters present in path[]. */
 	buffer = malloc(sizeof(char));
 	if (buffer == NULL)
 		return (NULL);
@@ -37,7 +36,7 @@ char *complete_path(char *string, char **environment)
 			{
 				if (*string == *delimiter)
 					break;
-				*string++;
+				string++;
 			}
 			strcpy(complete_string, buffer);
 			strcat(complete_string, string);

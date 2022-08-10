@@ -1,7 +1,7 @@
-//
-// Created by ifiokekott on 8/6/22.
-//
-#include "shell.h"
+/*
+* Created by ifiokekott on 8/6/22.
+*/
+#include "print_working_directory.h"
 
 int print_working_directory(char **env, char *path __attribute__((unused)), list_t **head __attribute__((unused)))
 {
@@ -9,6 +9,5 @@ int print_working_directory(char **env, char *path __attribute__((unused)), list
 	buffer = get_env_variable(env, "PWD");
 	puts(buffer);
 	free(buffer);
-	// puts("Concept works");
 	return (0);
 }

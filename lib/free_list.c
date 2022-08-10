@@ -1,7 +1,7 @@
-//
-// Created by ifiokekott on 8/7/22.
-//
-#include "shell.h"
+/*
+* Created by ifiokekott on 8/7/22.
+*/
+#include "free_list.h"
 
 /**
  * free_list - frees the content of the list

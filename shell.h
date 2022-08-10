@@ -11,56 +11,25 @@
 #ifndef SHELL_H
 #define SHELL_H
 
-/* libraries from gcc */
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <signal.h>
+/* libraries */
 
-/* custom definitions */
-#define STR_TO_INT(val) (val - 48)
-#define INT_TO_STR(val) (val + 48)
-
-/* custom data type */
-typedef struct list_s
-{
-	int value;
-	struct list_s *next;
-} list_t;
-
-typedef struct
-{
-	char *keyword;
-	int (*op)(char **, char *, list_t **);
-} execute_functions;
-
-/* custom standard library */
-void *_realloc(void *, unsigned int , unsigned int );
-int _pow_recursion(int , int );
-
-/* new functions */
-int prompt(char **);
-int execute_command(char *[], char **);
-int execute_decision(char *, char **, list_t **);
-char **parse_string(char *, char *);
-int free_double_pointer(char **);
-char *get_env_variable(char **, char *);
-char *complete_path(char *, char **);
-int (*get_builtin_function(char *))(char **, char *, list_t **);
-int set_env_variable(char **, char *, char *, list_t **);
-int change_directory(char **, char *, list_t **);
-int print_working_directory(char **, char *, list_t **);
-int echo(char **, char *, list_t **);
-int help(char **, char *, list_t **);
-int print_double_pointer(char **double_ptr);
-int exit_command(char *);
-char **copy_double_pointer(char **, int );
-int print_env(char **, char *, list_t **);
-list_t *add_node(list_t **head, int value);
-void free_list(list_t *head, char **);
+#include "lib/_pow_recursion.h"
+#include "lib/_realloc.h"
+#include "lib/prompt.h"
+#include "lib/execute_command.h"
+#include "lib/execute_decision.h"
+#include "lib/parse_string.h"
+#include "lib/free_double_pointer.h"
+#include "lib/env_variables.h"
+#include "lib/complete_path.h"
+#include "lib/get_builtin_function.h"
+#include "lib/change_directory.h"
+#include "lib/print_working_directory.h"
+#include "lib/echo.h"
+#include "lib/help.h"
+#include "lib/add_node_list.h"
+#include "lib/free_list.h"
+#include "lib/print_double_pointer.h"
+#include "lib/exit_command.h"
 
 #endif

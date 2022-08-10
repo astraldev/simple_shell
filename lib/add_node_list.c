@@ -1,7 +1,8 @@
-//
-// Created by ifiokekott on 8/7/22.
-//
-#include "shell.h"
+/*
+* Created by ifiokekott on 8/7/22.
+*/
+
+#include "add_node_list.h"
 
 /**
  * add_node - adds a node pointer
@@ -13,7 +14,7 @@
 list_t *add_node(list_t **head, int value)
 {
 	list_t *newNode;
-	size_t strLen;
+	/*size_t strLen;*/
 
 	newNode = malloc(sizeof(list_t));
 	if (!newNode)

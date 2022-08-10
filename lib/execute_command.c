@@ -1,7 +1,7 @@
-//
-// Created by ifiokekott on 8/4/22.
-//
-#include "shell.h"
+/*
+* Created by ifiokekott on 8/4/22.
+*/
+#include "execute_command.h"
 
 int execute_command(char *arguments[], char **environment)
 {

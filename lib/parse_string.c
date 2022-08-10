@@ -1,11 +1,14 @@
-#include "shell.h"
+#include "parse_string.h"
 
 char **parse_string(char *str, char *delimiter)
 {
 	int iteration, no_delimiter, k;
+	char *token;
 	char **parsed, *buffer = strdup(str);
 
-	//    calculates the number of tokens for the string
+	/**
+	* calculates the number of tokens for the string
+	*/
 	for (iteration = 0, no_delimiter = 0, k = 0; str[iteration]; iteration++)
 	{
 		if (str[iteration] == *delimiter)
@@ -13,9 +16,10 @@ char **parse_string(char *str, char *delimiter)
 	}
 
 	parsed = malloc(sizeof(char *) * (no_delimiter + 2));
+	token = strtok(buffer, delimiter);
+
 	if (parsed == NULL)
 		return (NULL);
-	char *token = strtok(buffer, delimiter);
 	while (token)
 	{
 		parsed[k] = malloc((strlen(token) + 1));
